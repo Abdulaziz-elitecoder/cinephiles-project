@@ -1,0 +1,35 @@
+blueish theme :
+
+
+:root[data-theme="light"] {
+  --text: #000000;
+  --background: #ffffff;
+  --primary: #5368d0;
+  --secondary: #cfd5f2;
+  --accent: #354cc0;
+}
+:root[data-theme="dark"] {
+  --text: #ffffff;
+  --background: #000000;
+  --primary: #2f44ac;
+  --secondary: #0d1330;
+  --accent: #3f56ca;
+}
+---------------------
+pinkish theme :
+
+:root[data-theme="light"] {
+  --text: #11041b;
+  --background: #f2e4fb;
+  --primary: #c995ef;
+  --secondary: #e3c6f6;
+  --accent: #871fd1;
+}
+:root[data-theme="dark"] {
+  --text: #f1e4fb;
+  --background: #12041b;
+  --primary: #45106a;
+  --secondary: #260939;
+  --accent: #962ee0;
+}s
+
