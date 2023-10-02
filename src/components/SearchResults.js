@@ -6,8 +6,6 @@ import Pagination from "react-bootstrap/Pagination";
 const SearchList = ({ searchResults, currentPage, totalPages, handlePageClick, calculatePagesRange }) => {
 
 
-
-
   return (
     <>
     <div className="row row-cols-1 row-cols-sm-2 row-cols-md-4 row-cols-lg-6 g-4">

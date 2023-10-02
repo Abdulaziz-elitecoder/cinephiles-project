@@ -1,11 +1,11 @@
-:root[data-theme="light"] {
+:root[theme="light"] {
   --text: #032104;
   --background: #f6fef6;
   --primary: #0e9017;
   --secondary: #defce0;
   --accent: #25e932;
 }
-:root[data-theme="dark"] {
+:root[theme="dark"] {
   --text: #defcdf;
   --background: #010901;
   --primary: #6ff178;
@@ -17,14 +17,15 @@ body {
   background-color: var(--background) !important;
 }
 
-.Home-header {
+/* .Home-header {
   color: var(--text);
   margin: 10px;
   font-size: 40px;
-}
+} */
 
-/* Dark Mode Styles */
-body.dark-mode {
+/* /Dark Mode Styles */ 
+
+/* body.dark-mode {
   background-color: #333333;
   color: #ffffff;
 }
@@ -37,4 +38,4 @@ body.dark-mode {
 button.dark-mode {
   background-color: #5bc0de;
   color: #ffffff;
-}
+} */

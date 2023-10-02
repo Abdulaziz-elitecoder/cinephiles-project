@@ -7,18 +7,16 @@ import { useSelector } from "react-redux";
 
 function App() {
   const theme = useSelector((state) => state.theme.current_theme);
+  document.documentElement.setAttribute("theme", theme);
 
   return (
     <div>
       <BrowserRouter>
         <Header />
-        <div
-          className={`theme-container ${theme === "dark" ? "dark-mode" : ""}`}
-        >
+
           <div className="container my-5 ">
             <Router />
           </div>
-        </div>
       </BrowserRouter>
     </div>
   );
