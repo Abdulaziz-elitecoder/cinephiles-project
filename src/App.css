@@ -14,11 +14,27 @@
 }
 
 body {
-background-color: var(--background) !important;
+  background-color: var(--background) !important;
 }
 
 .Home-header {
   color: var(--text);
   margin: 10px;
   font-size: 40px;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+  background-color: #333333;
+  color: #ffffff;
+}
+
+.theme-container.dark-mode {
+  background-color: #444444;
+  color: #ffffff;
+}
+
+button.dark-mode {
+  background-color: #5bc0de;
+  color: #ffffff;
 }
