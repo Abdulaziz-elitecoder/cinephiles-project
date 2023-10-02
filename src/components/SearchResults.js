@@ -8,7 +8,7 @@ const SearchList = ({ searchResults, currentPage, totalPages, handlePageClick, c
 
   return (
     <>
-    <div className="row row-cols-1 row-cols-sm-2 row-cols-md-4 row-cols-lg-6 g-4">
+    <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5 g-4">
       {searchResults.map((movie) => (
         <div className="col" key={movie.id}>
           <MovieCard movieItem={movie} />

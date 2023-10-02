@@ -17,11 +17,11 @@ body {
   background-color: var(--background) !important;
 }
 
-/* .Home-header {
+.Home-header {
   color: var(--text);
   margin: 10px;
   font-size: 40px;
-} */
+}
 
 /* /Dark Mode Styles */ 
 

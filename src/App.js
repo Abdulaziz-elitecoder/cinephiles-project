@@ -13,7 +13,6 @@ function App() {
     <div>
       <BrowserRouter>
         <Header />
-
           <div className="container my-5 ">
             <Router />
           </div>
