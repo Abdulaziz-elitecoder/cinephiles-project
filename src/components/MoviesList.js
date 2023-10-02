@@ -15,6 +15,7 @@ const MovieList = ({ movieList, currentPage, totalPages, handlePageClick, calcul
         </div>
       ))}
       </div>
+      
       <Pagination className="d-flex justify-content-center">
       <Pagination.First
         onClick={() => handlePageClick(1)}

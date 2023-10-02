@@ -48,8 +48,8 @@
 
 .rating {
   position: absolute;
-  bottom: 6rem;
-  right: 1.5rem;
+  bottom: 6.5rem;
+  left: 1.5rem;
   z-index: 1;
   width: 46px;
   height: 46px;

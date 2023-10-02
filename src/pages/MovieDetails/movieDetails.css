@@ -1,0 +1,85 @@
+.moviePage {
+  margin: 5px;
+  height: 40rem;
+  border-radius: 5px;
+}
+
+.ratingDiv {
+    display: flex;
+    margin: 10px;
+    color: var(--text);
+    font-size: 16px;
+    gap: 10rem;
+}
+
+.movieImg img{
+    height: 38rem;
+    width: 28rem;
+    margin:10px;
+    border-radius:5px ;
+}
+
+.movieDetails h2{
+    margin: 20px;
+    height: 100px;
+    font-size: 30px;
+    color: var(--text);
+
+}
+
+.movieDetails > p{
+    width: 70%;
+    font-size: 16px;
+    color: var(--text);
+    margin: 10px;
+}
+
+
+.recommendationsTitle {
+  margin: 10px;
+  color: var(--text);
+  font-size: 40px;
+  text-decoration: underline;
+}
+
+.recommendations {
+  margin: 5px 5px;
+  display: flex;
+  height: 33rem;
+}
+
+.recommendations .recommendation {
+  height: 30rem;
+  width: 17rem;
+  margin-top: 12px;
+  overflow: hidden;
+  border: 1px solid var(--text);
+  border-radius: 5px;
+  background-color: var(--text);
+  color: var(--background)
+
+}
+
+.recommendations .recommendation:hover {
+    scale: 1.01;
+    border: 1px solid var(--text);
+    border-radius: 5px;
+    background-color: var(--background);
+    color:var(--accent) !important;
+
+}
+
+.recommendations .recommendation .recommendationImg {
+  width: 17rem;
+  height: 23rem;
+  border-radius: 5px;
+}
+
+.recommendations .recommendationDetails {
+    margin-left: 5px;
+    font-size: 15px;
+    font-weight: 500;   
+    height: 7rem;
+    transition: .5s;
+}
+

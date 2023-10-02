@@ -37,11 +37,11 @@ export default function MovieCard({ movieItem }) {
                     strokeLinecap: "round", 
                   },
                   trail: {
-                    stroke: "var(--background)", // Color of the trail (the background)
+                    stroke: "green", // Color of the trail (the background)
                   },
                   text: {
                     fill: "var(--text)", 
-                    fontSize: "22px",
+                    fontSize: "26px",
                     fontWeight: "bold",
                   },
                   overflow: "hidden"
