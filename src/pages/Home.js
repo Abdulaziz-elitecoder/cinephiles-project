@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { getMovies, getMoviesByQuery } from "../api/movies";
-import MovieSearch from "../components/MovieSearchBox";
+import MovieSearch from "../components/MovieSearch/MovieSearchBox";
 import MovieList from "../components/MoviesList"; // Import the MovieList component
 import SearchList from "../components/SearchResults"; // Import the SearchList component
 
@@ -30,14 +30,19 @@ export default function Home() {
   }, [currentPage, searchResults]);
 
   const handleMovieSearch = (query) => {
-    getMoviesByQuery(query) 
+    if (typeof query === "string" && query.trim() === "") {
+      return;
+    }
+  
+    getMoviesByQuery(query, 1) 
       .then((res) => {
         setSearchResults(res.data.results);
-        setCurrentPage(res.data.page);
-        setTotalPages(Math.ceil(res.data.total_results)); // Update totalPages
+        setCurrentPage(1); 
+        setTotalPages(Math.ceil(res.data.total_results / itemsPerPage)); 
       })
       .catch((error) => console.log(error));
   };
+
 
   const handlePageClick = (page) => {
     setCurrentPage(page);
@@ -75,7 +80,7 @@ export default function Home() {
     <>
       <MovieSearch onSearch={handleMovieSearch} />
 
-      <h1>{searchResults ? "Search Results" : "Popular Movies"}</h1>
+      <h1 className="Home-header">{searchResults ? "Search Results" : "Popular Movies"}</h1>
       <hr />
 
       {/* Conditionally render either MovieList or SearchList */}

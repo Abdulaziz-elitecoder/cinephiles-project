@@ -1,0 +1,80 @@
+.Searchbox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    background-color: var(--secondary);
+    color: var(--text);
+    border-radius: 10px;
+    border: 1px solid var(--accent); 
+    transition: 1s; 
+    margin-bottom: 10px;    
+}
+
+.Searchbox:hover {
+    background-color: transparent;
+    border-color: var(--primary);
+}
+
+.Searchbox p {
+    font-size: 15px;
+}
+
+.MovieInput {
+    display: flex;
+    position: relative;
+    justify-content: space-around;
+    align-items: center;
+    height: 50px;
+    width: 300px;
+    align-self: center;
+    gap: 5px;
+    color: var(--text);
+}
+
+.titleSpan { 
+    color: var(--primary);
+}
+
+.searchInput {
+    width: 200px;
+    height: 40px;
+    font-size: 15px;
+    font-weight: 400;
+    background-color: var(--accent);
+    color: var(--text);
+    padding-left: 20px;
+    border-radius: 7px;
+    outline: none;
+    overflow: auto;
+    transition: .5s;
+    
+    
+}
+
+.searchInput:hover,
+.searchInput:focus {
+    border: 3px solid var(--primary);
+    background-color: var(--secondary);
+}
+
+.searchBtn {
+    width: 55px;
+    height: 37px;
+    text-decoration: none;
+    color: var(--text) !important;
+    font-size: 14px;
+    font-weight: 300;
+    background-color: var(--accent);
+    transition: .5s;
+    border: none;
+    border-radius: 7px;
+
+
+}
+
+.searchBtn:hover {
+transform: scale(1.1);
+border: 3px solid var(--primary);
+background-color: var(--secondary);
+}

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import './movieSearch.css'
 
 export default function MovieSearch({ onSearch }) {
   const [searchTerm, setSearchTerm] = useState("");
@@ -9,14 +10,18 @@ export default function MovieSearch({ onSearch }) {
   };
 
   return (
-    <div style={{display:"flex" , justifyContent:"center"}}>
-      <input
+    <div className="Searchbox">
+
+      <h1>Welcome to Our <span className="titleSpan"> Movies</span>  App</h1>
+      <p>Millions of Movies for you to discover....</p>
+      <div className="MovieInput">
+      <input className="searchInput"
         type="text"
         placeholder="Search for movies..."
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
       />
-      <button onClick={handleSearch}>Search</button>
+      <button className="searchBtn" onClick={handleSearch}>Search</button></div>
     </div>
   );
 }

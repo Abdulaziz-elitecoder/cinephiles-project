@@ -7,7 +7,7 @@ import Router from './routes';
 
 function App() {
 
-  document.documentElement.setAttribute("data-theme", "light");
+  document.documentElement.setAttribute("data-theme", "dark");
 
   return (
     <div>
