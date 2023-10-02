@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { getMovies, getMoviesByQuery } from "../apis/movies";
+import { getMovies, getMoviesByQuery } from "../api/movies";
 import MovieSearch from "../components/MovieSearchBox";
 import MovieList from "../components/MoviesList"; // Import the MovieList component
 import SearchList from "../components/SearchResults"; // Import the SearchList component
