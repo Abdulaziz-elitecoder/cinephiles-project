@@ -7,14 +7,17 @@ import SearchList from "../components/SearchResults"; // Import the SearchList c
 export default function Home() {
   const [movieList, setMoviesList] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 1;
+  const itemsPerPage = 20;
   const [totalPages, setTotalPages] = useState(1);
   const pagesToShow = 5;
   const [searchResults, setSearchResults] = useState(null);
+  const [query , setQuery] = useState(null);
+  
 
   useEffect(() => {
     if (searchResults !== null) {
-      setTotalPages(Math.ceil(searchResults.total_results / itemsPerPage)); // Update totalPages
+      handleMovieSearch(query, currentPage);
+
     } else {
       getMovies(currentPage)
         .then((res) => {
@@ -24,21 +27,14 @@ export default function Home() {
         .catch((error) => console.log(error));
     }
 
-    if(searchResults !== null){
-      handleMovieSearch(currentPage)
-    }
-  }, [currentPage, searchResults]);
+  }, [currentPage, searchResults , query]);
 
-  const handleMovieSearch = (query) => {
-    if (typeof query === "string" && query.trim() === "") {
-      return;
-    }
-  
-    getMoviesByQuery(query, 1) 
+  const handleMovieSearch = (query, page=1) => {
+    setQuery(query);
+    getMoviesByQuery(query, page)
       .then((res) => {
         setSearchResults(res.data.results);
-        setCurrentPage(1); 
-        setTotalPages(Math.ceil(res.data.total_results / itemsPerPage)); 
+        setTotalPages(Math.ceil(res.data.total_pages)); // Update totalPages
       })
       .catch((error) => console.log(error));
   };
@@ -78,7 +74,7 @@ export default function Home() {
 
   return (
     <>
-      <MovieSearch onSearch={handleMovieSearch} />
+      <MovieSearch onSearch={(searchTerm, page) => handleMovieSearch(searchTerm, setCurrentPage(page))} />
 
       <h1 className="Home-header">{searchResults ? "Search Results" : "Popular Movies"}</h1>
       <hr />
