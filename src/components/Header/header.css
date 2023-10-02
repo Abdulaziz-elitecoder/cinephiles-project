@@ -1,0 +1,33 @@
+.navbarBody {
+  background-color: var(--accent) !important;
+  color: var(--text) !important;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Brand {
+  position: relative;
+  color: var(--text);
+  font-size: 30px;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: bold;
+  font-style: italic;
+  -webkit-text-stroke: 1px;
+  -webkit-text-stroke-color: var(--secondary);
+}
+
+.heartHeader {
+  position: absolute;
+  color: white !important;
+  width: 35px;
+  height: 35px;
+  right: 3rem;
+  top: 1.2rem;
+  transition: 0.5s;
+}
+
+.heartHeader:hover {
+  color: yellow !important;
+  scale: 1.2;
+}

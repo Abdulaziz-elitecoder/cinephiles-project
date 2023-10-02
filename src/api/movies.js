@@ -13,7 +13,7 @@ export const getMovies = (page = 1) => {
 };
 
 //fetching movies using searching query
-export const getMoviesByQuery = (query, page = 1) => {
+export const getMoviesByQuery = (query, page =1) => {
   return axiosInstance.get("/3/search/movie", {
     params: {
       api_key: YOUR_API_KEY,

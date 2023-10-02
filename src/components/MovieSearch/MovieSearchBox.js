@@ -6,7 +6,7 @@ export default function MovieSearch({ onSearch }) {
 
   const handleSearch = () => {
     // Call the onSearch function passed from the parent component
-    onSearch(searchTerm);
+    onSearch(searchTerm , 1);
   };
 
   return (
