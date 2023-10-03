@@ -1,6 +1,17 @@
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[You can check the website from here [Cinephiles Website](https://cinephiles-v2.netlify.app/).preferably run it on PC for a seamless experience]
+
+## In this Project:
+
+We used the following technologies
+Html
+CSS 
+JavaScript
+React Libraries such ( Redux State Management(store-persist) - ReactBootstrap as UI library - Axios - Router )
+with the help of (www.realtimecolors.com) which offers quick exports for color palettes and fonts 
+
+
 
 ## Available Scripts
 
