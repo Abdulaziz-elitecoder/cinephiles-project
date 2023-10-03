@@ -57,6 +57,12 @@ small {
   font-size:14px
 }
 
+@media (max-width: 768px) {
+  .movieDetails {
+    display: none;
+  }
+}
+
 .movieDetails > p {
   position: relative;
   margin:10px;
