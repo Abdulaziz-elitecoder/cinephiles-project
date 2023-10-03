@@ -26,6 +26,15 @@ export default function Header() {
               <AiFillHeart className="heartHeader" />
             </Nav.Link>
           </Nav>
+
+          <Language />
+
+          <Nav className="me-auto">
+            {/* <Nav.Link href="/">Home</Nav.Link> */}
+            <Nav.Link href="#">
+              <AiFillHeart className="heartHeader" />
+            </Nav.Link>
+          </Nav>
           {/* </Navbar.Collapse> */}
         </Container>
         <Theme />
