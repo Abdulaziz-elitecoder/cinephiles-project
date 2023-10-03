@@ -17,9 +17,14 @@ function App() {
   return (
     <div>
       <BrowserRouter>
-        <Header />
-        <div className="container my-5 ">
-          <Router />
+        <div
+          className={`${lang === "ar" ? "text-right" : "text-left"} `}
+          dir={lang === "ar" ? "rtl" : "ltr"}
+        >
+          <Header />
+          <div className="container my-5 ">
+            <Router />
+          </div>
         </div>
       </BrowserRouter>
     </div>
