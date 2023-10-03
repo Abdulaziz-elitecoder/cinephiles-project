@@ -16,6 +16,8 @@ const Language = () => {
     setLanguageDropdownOpen(!isLanguageDropdownOpen);
   };
 
+  
+
   return (
     <div className="nav-item dropdown mx-2">
       <div

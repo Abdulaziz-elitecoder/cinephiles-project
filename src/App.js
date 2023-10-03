@@ -13,12 +13,13 @@ function App() {
   const theme = useSelector((state) => state.theme.current_theme);
   const lang = useSelector((state) => state.language.current_lang);
   document.documentElement.setAttribute("theme", theme);
+  document.documentElement.setAttribute("lang", lang);
 
   return (
     <div>
       <BrowserRouter>
         <Header />
-        <div className="container my-5 ">
+        <div className="container my-5 body-text-direction">
           <Router />
         </div>
       </BrowserRouter>
