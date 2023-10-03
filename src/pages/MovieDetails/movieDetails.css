@@ -1,14 +1,25 @@
 .moviePage {
+  display: inline-block;
   margin: 5px;
-  height: 40rem;
+  height: 480px;
   border-radius: 5px;
+  transition: 0.5s;
+  color:var(--text) !important;
+}
+
+.moviePage:hover {
+  background-color:var(--text);
+  color:var(--background) !important;
+  border: 2px solid var(--primary);
+  scale: 1.02;
 }
 
 .popularityDiv {
   display: flex;
+  flex-direction:column;
   margin: 10px;
-  color: var(--text);
   font-size: 16px;
+  font-weight: bold;
 }
 
 .movieImg img {
@@ -18,23 +29,50 @@
   border-radius: 7px;
 }
 
+.movieImg img:hover {
+  filter: blur(1px);
+}
+
 .movieDetails h2 {
-  margin: 20px;
-  height: 100px;
+  position: relative;
+  margin: 10px 10px 0 10px;
+  height: 50px;
   font-size: 30px;
-  color: var(--text);
+  font-weight:bold;
+  
+}
+
+.voteProgress {
+  position: relative;
+  width:200px;
+  height:20px;
+  font-size:13px;
+  color:var(--background);
+} 
+
+small {
+  position: relative;
+  top: -9px;
+  margin: 10px;
+  font-size:14px
 }
 
 .movieDetails > p {
-  width: 70%;
+  position: relative;
+  margin:10px;
+  width: 60%;
   font-size: 16px;
-  color: var(--text);
-  margin: 10px;
+}
+
+.overviewTitle {
+  position: relative;
+  margin-top:30px;
+  font-size:14px;
+  font-weight:bold;
 }
 
 .recommendationsTitle {
   margin: 10px;
-  color: var(--text);
   font-size: 40px;
   text-decoration: underline;
 }
