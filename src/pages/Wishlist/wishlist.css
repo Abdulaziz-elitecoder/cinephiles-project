@@ -1,0 +1,24 @@
+.wishlist-page-container {
+  padding: 20px;
+}
+
+.empty-wishlist {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 300px; /* Adjust the height as needed */
+  border: 2px dashed #ccc;
+  border-radius: 10px;
+}
+
+.empty-wishlist-icon {
+  font-size: 48px;
+  color: #ccc;
+}
+
+.empty-wishlist-text {
+  margin-top: 10px;
+  font-size: 18px;
+  color: #777;
+}
