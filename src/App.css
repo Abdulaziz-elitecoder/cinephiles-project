@@ -1,16 +1,16 @@
 :root[theme="light"] {
-  --text: #032104;
-  --background: #f6fef6;
-  --primary: #0e9017;
-  --secondary: #defce0;
-  --accent: #25e932;
+  --text: #0c020d;
+  --background: #f9e5fa;
+  --primary: #1a6f15;
+  --secondary: #dcf9ea;
+  --accent: #8dd930;
 }
 :root[theme="dark"] {
-  --text: #defcdf;
-  --background: #010901;
-  --primary: #6ff178;
-  --secondary: #032105;
-  --accent: #16da23;
+  --text: #fcf2fd;
+  --background: #19051a;
+  --primary: #94ea8f;
+  --secondary: #062213;
+  --accent: #83cf26;
 }
 
 :root[lang="en"] .body-text-direction {
