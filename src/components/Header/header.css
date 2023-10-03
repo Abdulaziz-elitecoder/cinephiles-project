@@ -4,17 +4,43 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border-radius :5px
 }
 
 .Brand {
   position: relative;
   color: var(--text);
-  font-size: 30px;
+  font-size: 32px;
   font-family: "Courier New", Courier, monospace;
   font-weight: bold;
   font-style: italic;
   -webkit-text-stroke: 1px;
   -webkit-text-stroke-color: var(--secondary);
+  transition: .5s;
+  overflow: hidden;
+}
+
+.Brand:hover {
+  scale: 1.1;
+  -webkit-text-stroke-color: var(--primary);
+}
+
+.Brand::before {
+  content: ' ';
+  position: absolute;
+  align-items:center;
+  justify-content: center;
+  top: 44px;
+  width: 0%;
+  height: 5px;
+  border-radius: 5px;
+  background:var(--background);
+  z-index: 3;
+  transition: 0.5s;
+}
+
+.Brand:hover::before {
+  width:100% ;
 }
 
 .heartHeader {

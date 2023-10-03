@@ -4,36 +4,33 @@
   border-radius: 5px;
 }
 
-.ratingDiv {
-    display: flex;
-    margin: 10px;
-    color: var(--text);
-    font-size: 16px;
-    gap: 10rem;
+.popularityDiv {
+  display: flex;
+  margin: 10px;
+  color: var(--text);
+  font-size: 16px;
 }
 
-.movieImg img{
-    height: 38rem;
-    width: 28rem;
-    margin:10px;
-    border-radius:5px ;
+.movieImg img {
+  height: 38rem;
+  width: 28rem;
+  margin: 10px;
+  border-radius: 7px;
 }
 
-.movieDetails h2{
-    margin: 20px;
-    height: 100px;
-    font-size: 30px;
-    color: var(--text);
-
+.movieDetails h2 {
+  margin: 20px;
+  height: 100px;
+  font-size: 30px;
+  color: var(--text);
 }
 
-.movieDetails > p{
-    width: 70%;
-    font-size: 16px;
-    color: var(--text);
-    margin: 10px;
+.movieDetails > p {
+  width: 70%;
+  font-size: 16px;
+  color: var(--text);
+  margin: 10px;
 }
-
 
 .recommendationsTitle {
   margin: 10px;
@@ -48,26 +45,42 @@
   height: 33rem;
 }
 
-.recommendations .recommendation {
+.recommendation {
+  display: flex;
+  position: relative;
+  flex-direction:column;
   height: 30rem;
   width: 17rem;
   margin-top: 12px;
-  overflow: hidden;
   border: 1px solid var(--text);
   border-radius: 5px;
   background-color: var(--text);
-  color: var(--background)
-
+  color: var(--background);
+  transition: 0.3s;
+  overflow: hidden;
 }
 
 .recommendations .recommendation:hover {
-    scale: 1.01;
-    border: 1px solid var(--text);
-    border-radius: 5px;
-    background-color: var(--background);
-    color:var(--accent) !important;
-
+  scale: 1.03;
+  border: 1px solid var(--text);
+  border-radius: 5px;
+  background-color: var(--background);
+  color: var(--accent);
 }
+
+.recommendation  .rating {
+  position: absolute;
+  top: 67%;
+  left: 5% ;
+  z-index: 3;
+  width: 40px;
+  height: 40px;
+  background-color: var(--secondary);
+  border-radius: 60%;
+  overflow: hidden;
+  border: 1px solid var(--secondary);
+}
+
 
 .recommendations .recommendation .recommendationImg {
   width: 17rem;
@@ -76,10 +89,14 @@
 }
 
 .recommendations .recommendationDetails {
-    margin-left: 5px;
-    font-size: 15px;
-    font-weight: 500;   
-    height: 7rem;
-    transition: .5s;
+  margin-top: 5px;
+  margin-left: 10px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.recommendationDate {
+  font-size: 12px;
+  margin-top: 5px;
 }
 

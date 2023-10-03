@@ -11,7 +11,7 @@ const SearchList = ({
 }) => {
   return (
     <>
-      <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5 g-4">
+      <div className="row row-cols-2 row-cols-sm-2 row-cols-md-3 row-cols-lg-5 g-4">
         {searchResults.map((movie) => (
           <div className="col" key={movie.id}>
             <MovieCard movieItem={movie} />
@@ -32,7 +32,7 @@ const SearchList = ({
               textDecoration: "none",
               fontSize: "15px",
               borderColor: "black",
-              fontSize: "30px",
+              fontSize: "20px",
             }}
           />
           <Pagination.Prev
@@ -44,7 +44,7 @@ const SearchList = ({
               textDecoration: "none",
               fontSize: "15px",
               borderColor: "black",
-              fontSize: "30px",
+              fontSize: "20px",
             }}
           />
 
@@ -63,7 +63,7 @@ const SearchList = ({
                 textDecoration: "none",
                 fontWeight: "bold",
                 borderColor: "black",
-                fontSize: "25px",
+                fontSize: "20px",
               }}
               activeLabel="yellow"
             >
@@ -80,7 +80,7 @@ const SearchList = ({
               textDecoration: "none",
               fontSize: "15px",
               borderColor: "black",
-              fontSize: "30px",
+              fontSize: "20px",
             }}
           />
           <Pagination.Last
@@ -92,7 +92,7 @@ const SearchList = ({
               textDecoration: "none",
               fontSize: "15px",
               borderColor: "black",
-              fontSize: "30px",
+              fontSize: "20px",
             }}
           />
         </Pagination>

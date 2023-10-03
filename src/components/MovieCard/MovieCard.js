@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Button from "react-bootstrap/Button";
+// import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import { CircularProgressbar } from "react-circular-progressbar";
 import { AiFillHeart } from 'react-icons/ai';
@@ -27,18 +27,18 @@ export default function MovieCard({ movieItem }) {
           <div className="rating">
             <CircularProgressbar className="progressbar"
               value={movieItem.vote_average*10}
-              text={`${movieItem.vote_average * 10}%`}
-              strokeWidth={8.5}
+              text={`${Math.floor(movieItem.vote_average * 10)}%`}
+              strokeWidth={9}
                 styles={{
                   path: {
                     
-                    stroke: "var(--text)",
+                    stroke: "var(--accent)",
                     d:"{movieItem.vote_average}", 
                     strokeLinecap: "round", 
                   },
                   trail: {
-                    stroke: "green", // Color of the trail (the background)
-                  },
+                    stroke: "var(--background)", // Color of the trail (the background)
+                  },  
                   text: {
                     fill: "var(--text)", 
                     fontSize: "26px",

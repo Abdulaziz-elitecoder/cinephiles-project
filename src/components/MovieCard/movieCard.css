@@ -34,13 +34,13 @@
 
 .cardHeart {
     position: absolute;
-    width: 30px;
-    height: 30px;
+    width: 35px;
+    height: 35px;
     color: white;
     text-decoration: none;
     transition: .5s;
-    right: 1.5rem;
-    bottom: 1.5rem;
+    right: 6%;
+    top: 88%;
 }
 
 .cardHeart:hover {
@@ -49,13 +49,13 @@
 
 .rating {
   position: absolute;
-  top: 22.7rem;
-  left: 1.3rem;
+  top: 67%;
+  left: 7% ;
   z-index: 1;
-  width: 46px;
-  height: 46px;
+  width: 45px;
+  height: 45px;
   background-color: var(--secondary);
-  border-radius: 51%;
+  border-radius: 60%;
   overflow: hidden;
   border: 1px solid var(--secondary);
 

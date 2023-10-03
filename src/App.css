@@ -31,14 +31,14 @@ body {
 
 .paginator {
   position: relative;
-  margin-top: 15px;
+  margin-top: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
   height: fit-content;
   width: fit-content;
   border: 1px solid var(--accent);
-  border-radius: 5px;
+  border-radius: 7px;
   color: yellow !important;
   font-size: 30px;
 }

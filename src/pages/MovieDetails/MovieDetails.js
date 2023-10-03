@@ -5,6 +5,7 @@ import { getMovieDetails, getMovieRecommendations } from "../../api/movies";
 import { useParams } from "react-router-dom"; // Import useParams
 import { Link } from "react-router-dom";
 import "./movieDetails.css";
+import { CircularProgressbar } from "react-circular-progressbar";
 
 export default function MovieDetails() {
   const [movie, setMovie] = useState(null);
@@ -36,15 +37,14 @@ export default function MovieDetails() {
         <div className="movieDetails">
           <h2>{movie.title}</h2>
           <p>{movie.release_date}</p>
-          <div className="ratingDiv">
+          <div className="popularityDiv">
             <p>Popularity : {movie.popularity}</p>
             <p>Rating : {`${movie.vote_average * 10}`}%</p>
           </div>
           <p>{movie.overview}</p>
         </div>
       </div>
-
-
+      <hr />
       <h1 className="recommendationsTitle">Recommendations</h1>
       <div className="row row-cols-1 row-cols-sm-2 row-cols-md-4 row-cols-lg-6 g-6 recommendations">
         {limitedRecommendations.map((recommendation) => (
@@ -57,6 +57,33 @@ export default function MovieDetails() {
                 className="recommendationImg"
                 src={`https://image.tmdb.org/t/p/w500${recommendation.poster_path}`}
               />
+
+              <div className="rating">
+                <CircularProgressbar
+                  className="progressbar"
+                  value={recommendation.vote_average * 10}
+                  text={`${Math.floor(recommendation.vote_average * 10)}%`}
+                  strokeWidth={9}
+                  styles={{
+                    path: {
+                      stroke: "var(--accent)",
+                      d: "{recommendation.vote_average}",
+                      strokeLinecap: "round",
+                    },
+                    trail: {
+                      stroke: "var(--background)", // Color of the trail (the background)
+                    },
+                    text: {
+                      fill: "var(--text)",
+                      fontSize: "26px",
+                      fontWeight: "bold",
+                    },
+                    overflow: "hidden",
+                  }}
+                />
+              </div>
+
+
               <div className="recommendationDetails">
                 <p className="recommendationName">{recommendation.title}</p>
                 <p className="recommendationDate">

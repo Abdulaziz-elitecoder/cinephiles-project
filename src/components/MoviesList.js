@@ -11,7 +11,7 @@ const MovieList = ({
 }) => {
   return (
     <>
-      <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5 g-4">
+      <div className="row row-cols-2 row-cols-sm-2 row-cols-md-3 row-cols-lg-5 g-4">
         {movieList.map((movie) => (
           <div className="col" key={movie.id}>
             <MovieCard movieItem={movie} />
@@ -32,7 +32,7 @@ const MovieList = ({
               textDecoration: "none",
               fontSize: "15px",
               borderColor: "black",
-              fontSize: "30px",
+              fontSize: "20px",
             }}
           />
           <Pagination.Prev
@@ -44,7 +44,7 @@ const MovieList = ({
               textDecoration: "none",
               fontSize: "15px",
               borderColor: "black",
-              fontSize: "30px",
+              fontSize: "20px",
             }}
           />
 
@@ -56,11 +56,14 @@ const MovieList = ({
               onClick={() => handlePageClick(page)}
               linkStyle={{
                 color: currentPage === page ? "var(--primary)" : "var(--text)", // Change color for active page
-                backgroundColor: currentPage === page ? "var(--secondary)" : "var(--background)", // Change background color for active page
+                backgroundColor:
+                  currentPage === page
+                    ? "var(--secondary)"
+                    : "var(--background)", // Change background color for active page
                 textDecoration: "none",
-                fontWeight: "bold", 
+                fontWeight: "bold",
                 borderColor: "black",
-                fontSize: "25px",
+                fontSize: "20px",
               }}
               activeLabel="yellow"
             >
@@ -77,9 +80,9 @@ const MovieList = ({
               textDecoration: "none",
               fontSize: "15px",
               borderColor: "black",
-              fontSize: "30px",
+              fontSize: "20px",
             }}
-          /> 
+          />
           <Pagination.Last
             onClick={() => handlePageClick(totalPages)}
             disabled={currentPage === totalPages}
@@ -89,9 +92,8 @@ const MovieList = ({
               textDecoration: "none",
               fontSize: "15px",
               borderColor: "black",
-              fontSize: "30px",
+              fontSize: "20px",
             }}
-            
           />
         </Pagination>
       </div>
