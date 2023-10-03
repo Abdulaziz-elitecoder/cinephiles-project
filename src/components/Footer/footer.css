@@ -1,0 +1,12 @@
+.footer {
+    background-color:var(--secondary);
+    height: 66px;
+    font-family:monospace;
+    font-size:18px;
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items:center;
+    color:var(--text)
+
+}
