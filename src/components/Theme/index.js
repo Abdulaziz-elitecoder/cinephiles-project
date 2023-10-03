@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
-import { changeCurrentTheme } from "../../store/slices/theme.js";
+import { changeCurrentTheme } from "../../store/slices/Theme.js";
 import { ReactComponent as Sun } from "./Sun.svg";
 import { ReactComponent as Moon } from "./Moon.svg";
 import "./Theme.css";
