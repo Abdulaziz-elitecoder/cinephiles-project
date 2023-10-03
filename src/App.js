@@ -1,6 +1,5 @@
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { faGlobe } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./App.css";
 import Header from "./components/Header/index.js";
 import Footer from "./components/Footer/index.js";
@@ -13,19 +12,16 @@ function App() {
   const theme = useSelector((state) => state.theme.current_theme);
   const lang = useSelector((state) => state.language.current_lang);
   document.documentElement.setAttribute("theme", theme);
+  document.documentElement.setAttribute("lang", lang);
 
   return (
     <div>
       <BrowserRouter>
-        <div
-          className={`${lang === "ar" ? "text-right" : "text-left"} `}
-          dir={lang === "ar" ? "rtl" : "ltr"}
-        >
-          <Header />
-          <div className="container my-5 ">
-            <Router />
-          </div>
+        <Header />
+        <div className="container my-5 body-text-direction">
+          <Router />
         </div>
+        <Footer />
       </BrowserRouter>
     </div>
   );

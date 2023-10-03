@@ -16,13 +16,15 @@ const Language = () => {
     setLanguageDropdownOpen(!isLanguageDropdownOpen);
   };
 
+  
+
   return (
     <div className="nav-item dropdown mx-2">
       <div
         className="nav-link dropdown-toggle language-dropdown"
         onClick={toggleLanguageDropdown}
       >
-        <FontAwesomeIcon icon="globe" />
+        <FontAwesomeIcon icon="globe" className="langIcon" />
       </div>
       {isLanguageDropdownOpen && (
         <div className="dropdown-content">

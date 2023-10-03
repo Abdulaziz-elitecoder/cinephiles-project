@@ -1,0 +1,17 @@
+.footer {
+    margin-top:20px;
+    background-color:var(--secondary);
+    height: 50px;
+    font-family:monospace;
+    font-size:14px;
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items:center;
+    color:var(--text);
+    position:fixed;
+    bottom:0;
+    right:0;
+    left:0;
+
+}

@@ -13,6 +13,15 @@
   --accent: #16da23;
 }
 
+:root[lang="en"] .body-text-direction {
+  direction: ltr;
+}
+
+/* Set text direction for Arabic */
+:root[lang="ar"] .body-text-direction {
+  direction: rtl;
+}
+
 ::-webkit-scrollbar {
   width: 10px;
 }
@@ -48,6 +57,7 @@ body {
 }
 
 .paginator {
+  direction: ltr;
   position: relative;
   margin-top: 20px;
   display: flex;
@@ -57,12 +67,18 @@ body {
   width: fit-content;
   border: 1px solid var(--accent);
   border-radius: 7px;
-  color: yellow !important;
   font-size: 30px;
 }
 
 /* Language dropdown style*/
-
+.footer {
+  margin-top:50px
+}
+.langIcon {
+  width: 15px;
+  height: 15px;
+  margin-left: 10px;
+}
 .dropdown-content {
   display: flex;
   flex-direction: column;
@@ -70,8 +86,11 @@ body {
   top: 100%;
   left: 0;
   z-index: 1;
-  background-color: #fff;
+  background-color: var(--background);
+  color: yellow;
   border: 1px solid #ccc;
+  border-radius:5px;
+  overflow: hidden;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -82,10 +101,12 @@ body {
   border: none;
   background-color: transparent;
   cursor: pointer;
+  color: var(--text);
 }
 
 .dropdown-content button:hover {
-  background-color: #f9f9f9;
+  background-color: var(--text);
+  color: var(--background);
 }
 
 /* /Dark Mode Styles */

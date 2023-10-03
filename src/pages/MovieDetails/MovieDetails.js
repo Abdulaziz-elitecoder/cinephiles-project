@@ -6,6 +6,7 @@ import { useParams } from "react-router-dom"; // Import useParams
 import { Link } from "react-router-dom";
 import "./movieDetails.css";
 import { CircularProgressbar } from "react-circular-progressbar";
+import ProgressBar from "react-bootstrap/ProgressBar";
 
 export default function MovieDetails() {
   const [movie, setMovie] = useState(null);
@@ -25,7 +26,13 @@ export default function MovieDetails() {
   }, [id]);
 
   if (!movie) {
-    return <div>Loading...</div>;
+    return (
+      <div>
+        <h4>Loading...</h4>
+        <h6>Movie doesn't exist </h6>
+        <strong>click on the logo to go back</strong>
+      </div>
+    );
   }
 
   return (
@@ -35,13 +42,27 @@ export default function MovieDetails() {
           <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} />
         </div>
         <div className="movieDetails">
-          <h2>{movie.title}</h2>
-          <p>{movie.release_date}</p>
+          <h2>
+            {movie.title}
+            {movie.release_date
+              ? ` (${new Date(movie.release_date).getFullYear()})`
+              : ""}
+          </h2>
+          <small>{movie.release_date}</small>
           <div className="popularityDiv">
-            <p>Popularity : {movie.popularity}</p>
-            <p>Rating : {`${movie.vote_average * 10}`}%</p>
+            {/* <p>User Rating : {`${movie.vote_average * 10}`}%</p> */}
+            <p>User Rating</p>
+            <ProgressBar
+              className="voteProgress"
+              striped
+              now={movie.vote_average * 10}
+              label={`${movie.vote_average*10}%`}
+              animated
+              variant="success"
+            />
           </div>
-          <p>{movie.overview}</p>
+          <p className="overviewTitle">Overview</p>
+          <p className="overview">{movie.overview}</p>
         </div>
       </div>
       <hr />
@@ -57,7 +78,6 @@ export default function MovieDetails() {
                 className="recommendationImg"
                 src={`https://image.tmdb.org/t/p/w500${recommendation.poster_path}`}
               />
-
               <div className="rating">
                 <CircularProgressbar
                   className="progressbar"
@@ -82,7 +102,6 @@ export default function MovieDetails() {
                   }}
                 />
               </div>
-
 
               <div className="recommendationDetails">
                 <p className="recommendationName">{recommendation.title}</p>

@@ -19,17 +19,15 @@
   
   main {
     transition: all 0.5s;
-    -webkit-text-stroke: 4px #d6f4f4;
+    -webkit-text-stroke: 7px var(--accent);
     font-variation-settings: "wght" 900, "ital" 1;
-    font-size: 15rem;
+    font-size: 9rem;
     text-align: center;
     color: transparent;
     font-family: "Meta", sans-serif;
-    text-shadow: 10px 10px 0px #07bccc,
-      15px 15px 0px #e601c0,
-      20px 20px 0px #e9019a,
-      25px 25px 0px #f40468,
-      45px 45px 10px #482896;
+    text-shadow: 3px 3px 0px var(--text),
+      5px 5px 0px  var(--secondary),
+      5px 5px 0px var(--accent);
     cursor: pointer;
   }
   
