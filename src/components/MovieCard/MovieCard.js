@@ -13,7 +13,9 @@ export default function MovieCard({ movieItem }) {
   const dispatch = useDispatch();
   const wishlistItems = useSelector((state) => state.wishlist.wishlistItems);
 
-  const isMovieInWishlist = wishlistItems.some((item) => item.id === movieItem.id);
+  const isMovieInWishlist = wishlistItems.some(
+    (item) => item.id === movieItem.id
+  );
 
   // Handle adding a movie to the wishlist
   const handleToggleWishlist = () => {
@@ -37,10 +39,10 @@ export default function MovieCard({ movieItem }) {
         <Card.Title className="cardTitle">{movieItem.title}</Card.Title>
         <Card.Text className="cardText">{movieItem.release_date}</Card.Text>
         <AiFillHeart
-        onClick={handleToggleWishlist}
-        style={{ color: isMovieInWishlist ? "yellow" : "white" }}
-        className="cardHeart"
-      />
+          onClick={handleToggleWishlist}
+          style={{ color: isMovieInWishlist ? "yellow" : "white" }}
+          className="cardHeart"
+        />
 
         <div className="rating">
           <CircularProgressbar
