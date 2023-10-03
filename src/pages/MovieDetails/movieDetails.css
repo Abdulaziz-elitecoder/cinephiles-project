@@ -29,8 +29,8 @@
   border-radius: 7px;
 }
 
-.movieImg img:hover {
-  filter: blur(1px);
+.movieImg img::after {
+  filter: blur(5px);
 }
 
 .movieDetails h2 {

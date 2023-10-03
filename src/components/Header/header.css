@@ -56,3 +56,19 @@
   color: yellow !important;
   scale: 1.2;
 }
+
+.wishlistCount {
+  position: absolute;
+  color:red;
+  font-size: 12px;
+  font-weight: bold;
+  border: 2px solid white;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  text-align: center;
+  background-color:white;
+  right: 20px;
+  top :6px;
+
+}

@@ -1,4 +1,5 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
@@ -9,6 +10,8 @@ import "./header.css";
 import { Link } from "react-router-dom";
 
 export default function Header() {
+  const wishlistItems = useSelector((state) => state.wishlist.wishlistItems);
+
   return (
     <>
       <Navbar expand="lg" className="bg-body-tertiary navbarBody">
@@ -30,7 +33,13 @@ export default function Header() {
           <Nav className="me-auto">
             {/* <Nav.Link href="/">Home</Nav.Link> */}
             <Nav.Link href="#">
-              <Link to={`/wish-list`}><AiFillHeart className="heartHeader" /></Link>
+              <Link to={`/wish-list`} style={{textDecoration:"none"}}>
+                <AiFillHeart className="heartHeader" />
+                {/* Display the number of wishlist items */}
+                {wishlistItems.length > 0 && (
+                  <p className="wishlistCount">{wishlistItems.length}</p>
+                )}
+              </Link>
             </Nav.Link>
           </Nav>
           {/* </Navbar.Collapse> */}
