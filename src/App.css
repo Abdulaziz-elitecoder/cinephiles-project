@@ -71,10 +71,13 @@ body {
 }
 
 /* Language dropdown style*/
-
+.footer {
+  margin-top:50px
+}
 .langIcon {
   width: 15px;
   height: 15px;
+  margin-left: 10px;
 }
 .dropdown-content {
   display: flex;
