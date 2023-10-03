@@ -23,6 +23,26 @@ body {
   font-size: 40px;
 }
 
+.Pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.paginator {
+  position: relative;
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: fit-content;
+  width: fit-content;
+  border: 1px solid var(--accent);
+  border-radius: 5px;
+  color: yellow !important;
+  font-size: 30px;
+}
+
 /* /Dark Mode Styles */ 
 
 /* body.dark-mode {

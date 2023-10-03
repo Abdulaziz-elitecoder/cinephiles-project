@@ -11,13 +11,11 @@ export default function Home() {
   const [totalPages, setTotalPages] = useState(1);
   const pagesToShow = 5;
   const [searchResults, setSearchResults] = useState(null);
-  const [query , setQuery] = useState(null);
-  
+  const [query, setQuery] = useState(null);
 
   useEffect(() => {
     if (searchResults !== null) {
       handleMovieSearch(query, currentPage);
-
     } else {
       getMovies(currentPage)
         .then((res) => {
@@ -26,10 +24,9 @@ export default function Home() {
         })
         .catch((error) => console.log(error));
     }
+  }, [currentPage, searchResults, query]);
 
-  }, [currentPage, searchResults , query]);
-
-  const handleMovieSearch = (query, page=1) => {
+  const handleMovieSearch = (query, page = 1) => {
     setQuery(query);
     getMoviesByQuery(query, page)
       .then((res) => {
@@ -38,7 +35,6 @@ export default function Home() {
       })
       .catch((error) => console.log(error));
   };
-
 
   const handlePageClick = (page) => {
     setCurrentPage(page);
@@ -70,13 +66,17 @@ export default function Home() {
     return pageRange;
   };
 
-  
-
   return (
     <>
-      <MovieSearch onSearch={(searchTerm, page) => handleMovieSearch(searchTerm, setCurrentPage(page))} />
+      <MovieSearch
+        onSearch={(searchTerm, page) =>
+          handleMovieSearch(searchTerm, setCurrentPage(page))
+        }
+      />
 
-      <h1 className="Home-header">{searchResults ? "Search Results" : "Popular Movies"}</h1>
+      <h1 className="Home-header">
+        {searchResults ? "Search Results" : "Popular Movies"}
+      </h1>
       <hr />
 
       {/* Conditionally render either MovieList or SearchList */}
