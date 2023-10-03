@@ -21,7 +21,7 @@ function App() {
         <div className="container my-5 body-text-direction">
           <Router />
         </div>
-        <Footer/>
+        <Footer />
       </BrowserRouter>
     </div>
   );
