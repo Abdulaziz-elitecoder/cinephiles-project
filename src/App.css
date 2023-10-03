@@ -57,6 +57,7 @@ body {
 }
 
 .paginator {
+  direction: ltr;
   position: relative;
   margin-top: 20px;
   display: flex;
@@ -66,7 +67,6 @@ body {
   width: fit-content;
   border: 1px solid var(--accent);
   border-radius: 7px;
-  color: yellow !important;
   font-size: 30px;
 }
 

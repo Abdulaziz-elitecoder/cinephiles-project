@@ -25,8 +25,14 @@ export default function MovieDetails() {
   }, [id]);
 
   if (!movie) {
-    return <div>Loading...</div>;
-  }
+    return (
+      <div>
+        <h4>Loading...</h4>
+        <h6>Movie doesn't exist </h6>
+        <strong>click on the logo to go back</strong>
+      </div>
+    );
+  } 
 
   return (
     <div>
@@ -57,7 +63,6 @@ export default function MovieDetails() {
                 className="recommendationImg"
                 src={`https://image.tmdb.org/t/p/w500${recommendation.poster_path}`}
               />
-
               <div className="rating">
                 <CircularProgressbar
                   className="progressbar"
@@ -82,7 +87,6 @@ export default function MovieDetails() {
                   }}
                 />
               </div>
-
 
               <div className="recommendationDetails">
                 <p className="recommendationName">{recommendation.title}</p>
