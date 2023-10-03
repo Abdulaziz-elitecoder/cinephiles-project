@@ -72,6 +72,10 @@ body {
 
 /* Language dropdown style*/
 
+.langIcon {
+  width: 15px;
+  height: 15px;
+}
 .dropdown-content {
   display: flex;
   flex-direction: column;
@@ -79,8 +83,11 @@ body {
   top: 100%;
   left: 0;
   z-index: 1;
-  background-color: #fff;
+  background-color: var(--background);
+  color: yellow;
   border: 1px solid #ccc;
+  border-radius:5px;
+  overflow: hidden;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -91,10 +98,12 @@ body {
   border: none;
   background-color: transparent;
   cursor: pointer;
+  color: var(--text);
 }
 
 .dropdown-content button:hover {
-  background-color: #f9f9f9;
+  background-color: var(--text);
+  color: var(--background);
 }
 
 /* /Dark Mode Styles */

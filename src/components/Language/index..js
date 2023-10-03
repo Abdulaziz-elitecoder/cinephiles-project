@@ -24,7 +24,7 @@ const Language = () => {
         className="nav-link dropdown-toggle language-dropdown"
         onClick={toggleLanguageDropdown}
       >
-        <FontAwesomeIcon icon="globe" />
+        <FontAwesomeIcon icon="globe" className="langIcon" />
       </div>
       {isLanguageDropdownOpen && (
         <div className="dropdown-content">
