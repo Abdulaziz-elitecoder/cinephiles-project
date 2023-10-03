@@ -7,7 +7,6 @@ import SearchList from "../components/SearchResults"; // Import the SearchList c
 export default function Home() {
   const [movieList, setMoviesList] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 20;
   const [totalPages, setTotalPages] = useState(1);
   const pagesToShow = 5;
   const [searchResults, setSearchResults] = useState(null);

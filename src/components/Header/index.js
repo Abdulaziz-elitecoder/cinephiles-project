@@ -6,6 +6,7 @@ import Theme from "../Theme/index";
 import Language from "../Language/index.";
 import { AiFillHeart } from "react-icons/ai";
 import "./header.css";
+import { Link } from "react-router-dom";
 
 export default function Header() {
   return (
@@ -29,7 +30,7 @@ export default function Header() {
           <Nav className="me-auto">
             {/* <Nav.Link href="/">Home</Nav.Link> */}
             <Nav.Link href="#">
-              <AiFillHeart className="heartHeader" />
+              <Link to={`/wish-list`}><AiFillHeart className="heartHeader" /></Link>
             </Nav.Link>
           </Nav>
           {/* </Navbar.Collapse> */}
