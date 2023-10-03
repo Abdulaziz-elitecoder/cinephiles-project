@@ -46,7 +46,7 @@ export default function MovieDetails() {
       </div>
       <hr />
       <h1 className="recommendationsTitle">Recommendations</h1>
-      <div className="row row-cols-1 row-cols-sm-2 row-cols-md-4 row-cols-lg-6 g-6 recommendations">
+      <div className="row row-cols-2 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-4 row-cols-xxl-6 g-6 recommendations">
         {limitedRecommendations.map((recommendation) => (
           <Link
             to={`/movie/${recommendation.id}`}
