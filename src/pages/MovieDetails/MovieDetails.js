@@ -37,17 +37,19 @@ export default function MovieDetails() {
 
   return (
     <div>
-      <div className="moviePage" style={{ display: "flex" }}>
+      <div className="moviePage" id="moviePage">
         <div className="movieImg">
           <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} />
         </div>
+
         <div className="movieDetails">
-          <h2>
+        <h2 className="movieTitle">
             {movie.title}
             {movie.release_date
               ? ` (${new Date(movie.release_date).getFullYear()})`
               : ""}
           </h2>
+
           <small>{movie.release_date}</small>
           <div className="popularityDiv">
             {/* <p>User Rating : {`${movie.vote_average * 10}`}%</p> */}
@@ -76,9 +78,10 @@ export default function MovieDetails() {
             <div key={recommendation.id} className="recommendation">
               <img
                 className="recommendationImg"
+                id="recommendationImg"
                 src={`https://image.tmdb.org/t/p/w500${recommendation.poster_path}`}
               />
-              <div className="rating">
+              <div className="rating" id="rating">
                 <CircularProgressbar
                   className="progressbar"
                   value={recommendation.vote_average * 10}

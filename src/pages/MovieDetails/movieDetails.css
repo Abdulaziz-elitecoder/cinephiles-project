@@ -1,5 +1,5 @@
 .moviePage {
-  display: inline-block;
+  display: flex;
   margin: 5px;
   height: 480px;
   border-radius: 5px;
@@ -23,8 +23,8 @@
 }
 
 .movieImg img {
-  height: 38rem;
-  width: 28rem;
+  height: 450px;
+  width: 320px;
   margin: 10px;
   border-radius: 7px;
 }
@@ -57,11 +57,7 @@ small {
   font-size:14px
 }
 
-@media (max-width: 768px) {
-  .movieDetails {
-    display: none;
-  }
-}
+
 
 .movieDetails > p {
   position: relative;
@@ -86,15 +82,15 @@ small {
 .recommendations {
   margin: 5px 5px;
   display: flex;
-  height: 33rem;
+  height: 400px;
 }
 
 .recommendation {
   display: flex;
   position: relative;
   flex-direction:column;
-  height: 30rem;
-  width: 17rem;
+  height: 370px;
+  width:205px ;
   margin-top: 12px;
   border: 1px solid var(--text);
   border-radius: 5px;
@@ -127,8 +123,8 @@ small {
 
 
 .recommendations .recommendation .recommendationImg {
-  width: 17rem;
-  height: 23rem;
+  width: 205px;
+  height: 280px;
   border-radius: 5px;
 }
 
@@ -144,3 +140,28 @@ small {
   margin-top: 5px;
 }
 
+@media(max-width: 790px) {
+  .moviePage,#moviePage{ 
+  display: inline-block;}
+}
+
+@media (max-width: 570px) {
+
+  .recommendation {
+    flex-direction: row;
+    width: 80vw;
+    height: 350px;
+  }
+
+  .recommendation #recommendationImg {
+    width: 210px;
+    height: 350px;
+  }
+
+  #rating {
+    top: 270px;
+    left: 78%;
+    width: 45px;
+    height: 45px;
+  }
+}

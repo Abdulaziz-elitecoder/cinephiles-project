@@ -4,6 +4,13 @@
   right: 100px;
 }
 
+@media (max-width: 600px) {
+  .dark_mode{
+    top: -1px;
+    right: 15%;
+  }
+}
+
 .dark_mode_label {
   width: 65px;
   height: 30px;

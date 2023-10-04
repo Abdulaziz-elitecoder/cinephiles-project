@@ -109,6 +109,26 @@ body {
   color: var(--background);
 }
 
+
+@media(max-width: 575px) {
+
+
+  .cardImg {
+    height: 400px !important;
+
+  }
+  .cardElement{ 
+    height: 490px !important;
+    width: 330px !important;
+}
+
+.cardElement .rating {
+  top: 75%;
+  left: 6% ;
+}
+}
+
+
 /* /Dark Mode Styles */
 
 /* body.dark-mode {
