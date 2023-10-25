@@ -28,8 +28,8 @@ const Language = () => {
       </div>
       {isLanguageDropdownOpen && (
         <div className="dropdown-content">
-          <button onClick={() => handleLanguageChange("ar")}>العربية</button>
-          <button onClick={() => handleLanguageChange("en")}>English</button>
+          <button onClick={() => handleLanguageChange("AR")}>العربية</button>
+          <button onClick={() => handleLanguageChange("EN")}>English</button>
         </div>
       )}
     </div>

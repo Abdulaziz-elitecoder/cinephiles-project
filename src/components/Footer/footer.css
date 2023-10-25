@@ -1,21 +1,19 @@
 .footer {
+  position: relative;
   margin-top: 10px;
   background-color: var(--secondary);
-  height: 50px;
   font-family: monospace;
+  height: 70px;
   font-size: 14px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   color: var(--text);
-  position: relative;
   width: 100%;
-  bottom: 0;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1400px) {
   .footer {
-    display: none;
-  }
+display: none;  }
 }

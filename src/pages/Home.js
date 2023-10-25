@@ -3,6 +3,7 @@ import { getMovies, getMoviesByQuery } from "../api/movies";
 import MovieSearch from "../components/MovieSearch/MovieSearchBox";
 import MovieList from "../components/MoviesList"; // Import the MovieList component
 import SearchList from "../components/SearchResults"; // Import the SearchList component
+import { useSelector } from "react-redux";
 
 export default function Home() {
   const [movieList, setMoviesList] = useState([]);
@@ -12,22 +13,30 @@ export default function Home() {
   const [searchResults, setSearchResults] = useState(null);
   const [query, setQuery] = useState(null);
 
+  const langRedux = useSelector((state) => state.language.current_lang);
+  const [lang, setLang] = useState(langRedux);
+
+  useEffect(() => {
+    // Update the local lang state when the Redux lang changes
+    setLang(langRedux);
+  }, [langRedux]);
+
   useEffect(() => {
     if (searchResults !== null) {
       handleMovieSearch(query, currentPage);
     } else {
-      getMovies(currentPage)
+      getMovies(currentPage, lang)
         .then((res) => {
           setMoviesList(res.data.results);
           setTotalPages(res.data.total_pages);
         })
         .catch((error) => console.log(error));
     }
-  }, [currentPage, searchResults, query]);
+  }, [currentPage, searchResults, query, lang]);
 
   const handleMovieSearch = (query, page = 1) => {
     setQuery(query);
-    getMoviesByQuery(query, page)
+    getMoviesByQuery(query, page, lang)
       .then((res) => {
         setSearchResults(res.data.results);
         setTotalPages(Math.ceil(res.data.total_pages)); // Update totalPages
@@ -73,9 +82,15 @@ export default function Home() {
         }
       />
 
-      <h1 className="Home-header">
-        {searchResults ? "Search Results" : "Popular Movies"}
-      </h1>
+      {lang === "EN" ? (
+        <h1 className="Home-header">
+          {searchResults ? "Search Results" : "Popular Movies"}
+        </h1>
+      ) : (
+        <h1 className="Home-header">
+          {searchResults ? "نتائج البحث" : "الأفلام المحبوبة"}
+        </h1>
+      )}
       <hr />
 
       {/* Conditionally render either MovieList or SearchList */}

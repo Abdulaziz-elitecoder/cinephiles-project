@@ -64,14 +64,12 @@
   color:red;
   font-size: 12px;
   font-weight: bold;
-  border: 2px solid white;
   width: 20px;
   height: 20px;
   border-radius: 50%;
   text-align: center;
-  background-color:white;
-  right: 20px;
-  top :6px;
+  right: 44px;
+  top :22px;
 
 }
 
@@ -84,10 +82,10 @@
   }
 
   .wishlistCount{
-    font-size: 8px;
+    font-size: 9px;
     width: 15px;
     height: 15px;
-    right: 15px;
-    top :8px;
+    right: 32px;
+    top :26px;
   }
 }

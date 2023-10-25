@@ -18,7 +18,7 @@ function App() {
     <div>
       <BrowserRouter>
         <Header />
-        <div className="container my-5 body-text-direction">
+        <div className="container my-5 body-text-direction bodyElement">
           <Router />
         </div>
         <Footer />

@@ -7,23 +7,24 @@ import { Link } from "react-router-dom";
 import "./movieDetails.css";
 import { CircularProgressbar } from "react-circular-progressbar";
 import ProgressBar from "react-bootstrap/ProgressBar";
+import { useSelector } from "react-redux";
 
 export default function MovieDetails() {
   const [movie, setMovie] = useState(null);
   const [recommendations, setRecommendations] = useState([]);
   const limitedRecommendations = recommendations.slice(0, 6);
   const { id } = useParams(); // Use useParams to get the movie ID from the URL
-
+  const lang = useSelector((state) => state.language.current_lang);
   useEffect(() => {
     // Fetch movie details by ID using an API call
-    getMovieDetails(id)
+    getMovieDetails(id, lang)
       .then((res) => setMovie(res.data))
       .catch((error) => console.log(error));
 
-    getMovieRecommendations(id)
+    getMovieRecommendations(id, lang)
       .then((res) => setRecommendations(res.data.results))
       .catch((error) => console.log(error));
-  }, [id]);
+  }, [id, lang]);
 
   if (!movie) {
     return (
@@ -43,7 +44,7 @@ export default function MovieDetails() {
         </div>
 
         <div className="movieDetails">
-        <h2 className="movieTitle">
+          <h2 className="movieTitle">
             {movie.title}
             {movie.release_date
               ? ` (${new Date(movie.release_date).getFullYear()})`
@@ -58,7 +59,7 @@ export default function MovieDetails() {
               className="voteProgress"
               striped
               now={movie.vote_average * 10}
-              label={`${movie.vote_average*10}%`}
+              label={`${Math.round(movie.vote_average * 10).toFixed(2)}%`}
               animated
               variant="success"
             />

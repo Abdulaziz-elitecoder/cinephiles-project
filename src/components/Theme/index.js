@@ -1,23 +1,39 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import { useDispatch } from "react-redux";
-import { changeCurrentTheme } from "../../store/slices/theme.js";
+import { changeCurrentTheme } from "../../store/slices/Theme.js";
 import { ReactComponent as Sun } from "./Sun.svg";
 import { ReactComponent as Moon } from "./Moon.svg";
 import "./Theme.css";
 
+// const Theme = () => {
+//   const dispatch = useDispatch();
+
+//   const [isDarkMode, setDarkMode] = useState(false);
+
+//   const handleToggle = () => {
+//     setDarkMode(!isDarkMode);
+//     if (!isDarkMode) {
+//       dispatch(changeCurrentTheme("dark"));
+//     } else {
+//       dispatch(changeCurrentTheme("light"));
+//     }
+//   };
 const Theme = () => {
   const dispatch = useDispatch();
 
-  const [isDarkMode, setDarkMode] = useState(false);
+  const savedTheme = localStorage.getItem("theme");
+  const [isDarkMode, setDarkMode] = useState(savedTheme === "dark");
+
+  useEffect(() => {
+    dispatch(changeCurrentTheme(isDarkMode ? "dark" : "light"));
+    
+    localStorage.setItem("theme", isDarkMode ? "dark" : "light");
+  }, [isDarkMode, dispatch]);
 
   const handleToggle = () => {
     setDarkMode(!isDarkMode);
-    if (!isDarkMode) {
-      dispatch(changeCurrentTheme("dark"));
-    } else {
-      dispatch(changeCurrentTheme("light"));
-    }
   };
+  
 
   return (
     <div className="dark_mode">

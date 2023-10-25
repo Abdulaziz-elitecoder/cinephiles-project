@@ -30,6 +30,7 @@
     align-self: center;
     gap: 5px;
     color: var(--text);
+    direction: ltr;
 
 }
 
